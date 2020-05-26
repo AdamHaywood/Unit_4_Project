@@ -5,7 +5,7 @@
 class Game {
   constructor() {
     this.missed = 0;
-    this.activePhase = null;
+    this.activePhrase = null;
     this.phrases = this.createPhrases();
   }
   
@@ -25,6 +25,11 @@ class Game {
     return this.phrases[i];
   }
 
-}
 
+  startGame() {
+    document.getElementById('overlay').style.display = 'none';
+    this.activePhrase = this.getRandomPhrase();
+    this.activePhrase.addPhraseToDisplay();
+  }
+}
 

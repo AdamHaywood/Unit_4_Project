@@ -12,11 +12,12 @@ class Phrase {
     let singleChars = [...this.phrase];
     singleChars.forEach((char) => {
       if (char === ' ') {
-        phraseList.append(`<li class="space">${char}</li>`)
+        phraseList.innerHTML += `<li class="space">${char}</li>`
       } else {
-        phraseList.append(`<li class="hide letter ${char}">${char}</li>`)
+        phraseList.innerHTML += `<li class="hide letter ${char}">${char}</li>`
       }
     })
     
   }
 }
+
